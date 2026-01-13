@@ -75,8 +75,22 @@ fetch('/content/partidos.json')
      2026 Halcones Voley
 </footer>
 </div>
+  <script>
+  window.addEventListener("load", () => {
+    const splash = document.getElementById("splash");
+    const content = document.getElementById("main-content");
+
+    setTimeout(() => {
+      splash.style.display = "none";
+      content.classList.remove("hidden");
+      content.classList.add("show");
+    }, 2500);
+  });
+</script>
+
 </body>
 </html>
+
 
 
 
