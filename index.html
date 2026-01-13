@@ -11,10 +11,11 @@
 
 <script>
 fetch('/content/partidos.json')
-    .then(res => res.json())
-    .then(data => {
-        document.getElementById('proximo-partido').textContent = data.proximo;
-    });
+  .then(res => res.json())
+  .then(data => {
+    document.getElementById('partido-rival').textContent = data.rival;
+    document.getElementById('partido-detalle').textContent = data.detalle;
+  });
 </script>
 
 <body>
@@ -45,8 +46,9 @@ fetch('/content/partidos.json')
 <!-- INFO -->
 <section class="info">
     <div class="card">
-        <h3>Próximos Partidos</h3>
-        <p id="proximo-partido">Cargando...</p>
+      <h3>Próximos Partidos</h3>
+          <p id="partido-rival" class="partido-rival">Cargando...</p>
+          <p id="partido-detalle" class="partido-detalle"></p>
     </div>
 
     <div class="card">
@@ -68,5 +70,6 @@ fetch('/content/partidos.json')
 
 </body>
 </html>
+
 
 
