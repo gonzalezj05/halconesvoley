@@ -196,6 +196,18 @@ footer {
   border: 2px solid var(--accent);
 }
 
+.partido-rival {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 6px;
+}
+
+.partido-detalle {
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.75);
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -227,4 +239,5 @@ footer {
     font-size: 1.2rem;
   }
 }
+
 
