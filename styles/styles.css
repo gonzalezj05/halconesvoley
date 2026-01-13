@@ -189,6 +189,13 @@ footer {
   transform: translateY(-2px);
 }
 
+.iframe-container {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  border: 2px solid var(--accent);
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -220,3 +227,4 @@ footer {
     font-size: 1.2rem;
   }
 }
+
