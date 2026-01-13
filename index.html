@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Halcones Voley – En Vivo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/styles/styles.css">
+<link rel="icon" type="image/png" href="img/halconesescudo.png">
+
+</head>
+
+<script>
+fetch('/content/partidos.json')
+    .then(res => res.json())
+    .then(data => {
+        document.getElementById('proximo-partido').textContent = data.proximo;
+    });
+</script>
+
+<body>
+
+<header class="fade-in">
+<img src="img/halconesescudo.png" alt="Logo Club">
+<h1>HALCONES VOLEY</h1>
+</header>
+
+<main class="fade-in delay-1">
+
+<!-- TRANSMISIÓN -->
+<section class="live-card">
+    <div class="live-title">
+        <span class="live-dot"></span>
+        <span>EN VIVO</span>
+    </div>
+
+    <div class="iframe-container">
+        <iframe
+        id="stream"
+        src="https://www.youtube.com/embed/VIDEO_ID"
+        allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<!-- INFO -->
+<section class="info">
+    <div class="card">
+        <h3>Próximo Partido</h3>
+        <p id="proximo-partido">Cargando...</p>
+    </div>
+
+    <div class="card">
+        <h3>Categorías</h3>
+        <p>Sub 16 · Sub 18 · Sub 21</p>
+    </div>
+
+    <div class="card">
+        <h3>Contacto</h3>
+        <a href="pages/contact.html" class="btn-link">Ver información</a>
+    </div>  
+</section>
+
+</main>
+
+<footer class="fade-in delay-2">
+     2026 Halcones Voley
+</footer>
+
+</body>
+</html>
