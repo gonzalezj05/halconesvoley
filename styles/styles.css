@@ -208,6 +208,55 @@ footer {
   color: rgba(255,255,255,0.75);
 }
 
+/* SPLASH SCREEN */
+#splash {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, #120017, #050007);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#splash img {
+  width: 280px;
+  max-width: 70%;
+  animation: splashAnim 2.5s ease forwards;
+}
+
+/* Animación del escudo */
+@keyframes splashAnim {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+}
+
+/* Contenido oculto */
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Fade-in del contenido */
+.show {
+  opacity: 1;
+  transition: opacity 1.2s ease;
+}
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -239,5 +288,6 @@ footer {
     font-size: 1.2rem;
   }
 }
+
 
 
